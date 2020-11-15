@@ -1,0 +1,57 @@
+<div class="container">
+    <h1>Liste des personnages</h1>
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    {{tabPersonnages[0].nom}}
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"><img [src]="tabPersonnages[0].image"class = "rounded-circle" alt="Donald"></h4>
+                    <p class="card-text">majeur <input disabled type="checkbox"[checked]="tabPersonnages[0].majeur" name="" id=""> <span class="badge badge-pill badge-dark">Nombre d'abonnés : {{tabPersonnages[0].nb}}</span></p>
+                </div>
+                <div class="card-footer text-muted">
+                    <input type="button"class="btn btn-primary" (click)="Inc(0)"value="S'abonner">
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    {{tabPersonnages[1].nom}}
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"><img [src]="tabPersonnages[1].image"class = "rounded-circle" alt="Popey"></h4>
+                    <p class="card-text">majeur <input disabled type="checkbox"[checked]="tabPersonnages[1].majeur" name="" id=""> <span class="badge badge-pill badge-dark">Nombre d'abonnés : {{tabPersonnages[1].nb}}</span></p>
+                </div>
+                <div class="card-footer text-muted">
+                    <input type="button"class="btn btn-primary" (click)="Inc(1)"value="S'abonner">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    {{tabPersonnages[2].nom}}
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"><img [src]="tabPersonnages[2].image"class = "rounded-circle" alt="Sam"></h4>
+                    <p class="card-text">majeur <input disabled type="checkbox"[checked]="tabPersonnages[2].majeur" name="" id=""> <span class="badge badge-pill badge-dark">Nombre d'abonnés : {{tabPersonnages[2].nb}}</span></p>
+                </div>
+                <div class="card-footer text-muted">
+                    <input type="button"class="btn btn-primary" (click)="Inc(2)"value="S'abonner">
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="left">Le nombre de personnages maheurs est : <span class="badge badge-pill badge-warning">{{nbmaj()}}</span></p>
+</div>
